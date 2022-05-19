@@ -7,6 +7,10 @@ setup(
     description='Get random anime gifs by category.',
     author='Marco-Sa2000',
     license='MIT',
-    url="",
+    url="https://github.com/MarcoSa-2000/anime-gifs.py",
     python_requires='>=3.8',
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent"],
 )

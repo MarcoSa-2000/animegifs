@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+anime_gifs.py.egg-info/PKG-INFO
+anime_gifs.py.egg-info/SOURCES.txt
+anime_gifs.py.egg-info/dependency_links.txt
+anime_gifs.py.egg-info/top_level.txt
+utils/__init__.py
+utils/get_gif.py
+utils/gifs.py
