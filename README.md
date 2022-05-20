@@ -3,6 +3,10 @@ Get random anime gifs by category. Use Python.
 
 WIP - updated frequently.
 
+```
+pip install animegifs
+```
+
 # HOW TO USE
 
 ```py
