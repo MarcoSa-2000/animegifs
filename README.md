@@ -18,4 +18,12 @@ gif = gifs(category)
 gif = gif.get_gif()
 ```
 
-category list: attack (WIP)
+**Category list:** 
+
+* Attack
+* Bite
+* Bloodsuck
+* Blush
+* Bonk
+
+WIP.

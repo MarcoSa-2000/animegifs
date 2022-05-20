@@ -6,3 +6,7 @@ response = urlopen(url)
 data = json.loads(response.read())
 
 attack = data['attack']
+bite = data['bite']
+bloodsuck = data['bloodsuck']
+blush = data['blush']
+bonk = data['bonk']

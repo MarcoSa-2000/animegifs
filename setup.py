@@ -1,10 +1,21 @@
 from setuptools import find_packages, setup
+import codecs
+import os
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+    long_description = "\n" + fh.read()
+
+LONG_DESCRIPTION = long_description
+VERSION = '0.2.1'
 
 setup(
     name='animegifs',
     packages=find_packages(),
-    version='0.2.0',
+    version=VERSION,
     description='Get random anime gifs by category.',
+    long_description=LONG_DESCRIPTION,
     author='Marco-Sa2000',
     author_email='grest0grest@gmail.com',
     license='MIT',
@@ -13,6 +24,6 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent"],
-    keyword=['anime', 'gif'],
+        "Operating System :: Microsoft :: Windows"],
+    keywords=['anime', 'gif', 'python'],
 )
