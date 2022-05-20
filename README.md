@@ -1,3 +1,17 @@
 # anime-gifs.py
-Get random anime gifs by category. Python.
-WIP
+Get random anime gifs by category. Use Python.
+
+WIP - updated frequently.
+
+# HOW TO USE
+
+```py
+from animegifs import animegifs
+
+gifs = animegifs.Animegifs
+
+gif = gifs(category)
+gif = gif.get_gif()
+```
+
+category list: attack (WIP)
