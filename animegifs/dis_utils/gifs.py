@@ -1,1 +1,8 @@
-attack = ['https://cdn.discordapp.com/attachments/921455758330200135/921455815787958302/FdXPLmh.gif']
+import json
+from urllib.request import urlopen
+
+url = 'https://github.com/MarcoSa-2000/animegifs/raw/main/animegifs/dis_utils/gifs.json'
+response = urlopen(url)
+data = json.loads(response.read())
+
+attack = data['attack']

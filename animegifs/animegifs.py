@@ -1,5 +1,5 @@
-import random
 from .dis_utils import gifs
+import random
 
 class Animegifs():
 

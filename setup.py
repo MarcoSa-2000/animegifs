@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 setup(
     name='animegifs',
     packages=find_packages(),
-    version='0.1.0',
+    version='0.2.0',
     description='Get random anime gifs by category.',
     author='Marco-Sa2000',
     author_email='grest0grest@gmail.com',
