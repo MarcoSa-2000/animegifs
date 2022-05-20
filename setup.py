@@ -16,6 +16,7 @@ setup(
     version=VERSION,
     description='Get random anime gifs by category.',
     long_description=LONG_DESCRIPTION,
+    long_description_content_type='text/markdown',
     author='Marco-Sa2000',
     author_email='grest0grest@gmail.com',
     license='MIT',
