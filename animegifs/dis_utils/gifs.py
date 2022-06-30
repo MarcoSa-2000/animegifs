@@ -1,7 +1,7 @@
 import json
 from urllib.request import urlopen
 
-url = 'https://github.com/MarcoSa-2000/animegifs/raw/main/animegifs/dis_utils/gifs.json'
+url = 'https://github.com/MarcoSa-2000/marcosa-2000.github.io/raw/main/utils/animegifs_project/gifs.json'
 response = urlopen(url)
 data = json.loads(response.read())
 
@@ -10,3 +10,5 @@ bite = data['bite']
 bloodsuck = data['bloodsuck']
 blush = data['blush']
 bonk = data['bonk']
+brofist = data['brofist']
+cry = data['cry']

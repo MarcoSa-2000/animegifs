@@ -20,6 +20,10 @@ class Animegifs():
             gif = random.choice(gifs.blush)
         elif self.category == 'bonk':
             gif = random.choice(gifs.bonk)
+        elif self.category == 'brofist':
+            gif = random.choice(gifs.brofist)
+        elif self.category == 'cry':
+            gif = random.choice(gifs.cry)
         else:
             raise Exception("Not a valid category.")
         return gif

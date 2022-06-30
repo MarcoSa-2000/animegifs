@@ -3,9 +3,7 @@ Get random anime gifs by category. Use Python.
 
 WIP - updated frequently.
 
-`
-pip install animegifs
-`
+`pip install animegifs`
 
 # HOW TO USE
 
@@ -25,5 +23,7 @@ gif = gif.get_gif()
 * Bloodsuck
 * Blush
 * Bonk
+* Brofist
+* Cry
 
 WIP.
