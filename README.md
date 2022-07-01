@@ -25,5 +25,7 @@ gif = gif.get_gif()
 * Bonk
 * Brofist
 * Cry
+* Cuddle
+* Dance
 
 WIP.
