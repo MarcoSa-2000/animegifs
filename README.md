@@ -27,5 +27,11 @@ gif = gif.get_gif()
 * Cry
 * Cuddle
 * Dance
+* Disgust
+* Facedesk
+* Facepalm
+* Flick
+* Flirt
+* Handhold
 
 WIP.

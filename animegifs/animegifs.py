@@ -28,6 +28,18 @@ class Animegifs():
             gif = random.choice(gifs.cuddle)
         elif self.category == 'dance':
             gif = random.choice(gifs.dance)
+        elif self.category == 'disgust':
+            gif = random.choice(gifs.disgust)
+        elif self.category == 'facedesk':
+            gif = random.choice(gifs.facedesk)
+        elif self.category == 'facepalm':
+            gif = random.choice(gifs.facepalm)
+        elif self.category == 'flick':
+            gif = random.choice(gifs.flick)
+        elif self.category == 'flirt':
+            gif = random.choice(gifs.flirt)
+        elif self.category == 'handhold':
+            gif = random.choice(gifs.handhold)
         else:
             raise Exception("Not a valid category.")
         return gif
