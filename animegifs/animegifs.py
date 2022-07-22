@@ -1,4 +1,3 @@
-#from .dis_utils import gifs
 import random
 import json
 from urllib.request import urlopen
@@ -23,11 +22,13 @@ def access():
     flick = data['flick']  #12
     flirt = data['flirt']  #13
     handhold = data['handhold']  #14
+    happy = data['happy']  # 15
+    harass = data['harass']  # 16
 
     del data
 
     return attack, bite, bloodsuck, blush, bonk, brofist, cry, cuddle, dance, disgust, facedesk, facepalm, flick, \
-           flirt, handhold
+           flirt, handhold, happy, harass
 
 class Animegifs():
 
@@ -68,6 +69,10 @@ class Animegifs():
             gif = random.choice(access()[13])
         elif self.category == 'handhold':
             gif = random.choice(access()[14])
+        elif self.category == 'happy':
+            gif = random.choice(access()[15])
+        elif self.category == 'harass':
+            gif = random.choice(access()[16])
         else:
             raise Exception("Not a valid category.")
         return gif

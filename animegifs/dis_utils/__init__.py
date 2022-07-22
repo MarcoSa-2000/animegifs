@@ -1,2 +1,2 @@
 # __init__.py
-__all__ = ['gifs']
+__all__ = ['infoes.py']
