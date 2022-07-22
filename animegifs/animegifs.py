@@ -24,6 +24,8 @@ def access():
     flirt = data['flirt']  #13
     handhold = data['handhold']  #14
 
+    del data
+
     return attack, bite, bloodsuck, blush, bonk, brofist, cry, cuddle, dance, disgust, facedesk, facepalm, flick, \
            flirt, handhold
 
