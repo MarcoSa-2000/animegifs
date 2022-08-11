@@ -33,5 +33,13 @@ gif = gif.get_gif()
 * Flick
 * Flirt
 * Handhold
+* Happy
+* Harass
+* Highfive
+* Hug
+* Icecream
+* Insult
+* Kill
+* Kiss
 
 WIP.

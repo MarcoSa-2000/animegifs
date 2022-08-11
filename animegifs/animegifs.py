@@ -24,11 +24,17 @@ def access():
     handhold = data['handhold']  #14
     happy = data['happy']  # 15
     harass = data['harass']  # 16
+    highfive = data['highfive']  # 17
+    hug = data['hug']  # 18
+    icecream = data['icecream']  # 19
+    insult = data['insult']  # 20
+    kill = data['kill']  # 21
+    kiss = data['kiss']  # 22
 
     del data
 
     return attack, bite, bloodsuck, blush, bonk, brofist, cry, cuddle, dance, disgust, facedesk, facepalm, flick, \
-           flirt, handhold, happy, harass
+           flirt, handhold, happy, harass, highfive, hug, icecream, insult, kill, kiss
 
 class Animegifs():
 
@@ -73,6 +79,18 @@ class Animegifs():
             gif = random.choice(access()[15])
         elif self.category == 'harass':
             gif = random.choice(access()[16])
+        elif self.category == 'highfive':
+            gif = random.choice(access()[17])
+        elif self.category == 'hug':
+            gif = random.choice(access()[18])
+        elif self.category == 'icecream':
+            gif = random.choice(access()[19])
+        elif self.category == 'insult':
+            gif = random.choice(access()[20])
+        elif self.category == 'kill':
+            gif = random.choice(access()[21])
+        elif self.category == 'kiss':
+            gif = random.choice(access()[22])
         else:
             raise Exception("Not a valid category.")
         return gif
