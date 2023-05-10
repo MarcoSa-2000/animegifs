@@ -1,7 +1,7 @@
 # anime-gifs.py
-Get random anime gifs by category. Use Python (intended initially for Discord).
+Get random anime gifs by category. Use Python (intended (for now) for Discord).
 
-WIP - updated in time to time. v0.4.0 is the only working release.
+WIP - updated in time to time. Versions below v0.4.0 aren't expected to work.
 
 `pip install animegifs`
 
@@ -9,9 +9,11 @@ WIP - updated in time to time. v0.4.0 is the only working release.
 
 ```py
 
-from animegifs.animegifs import Animegifs
+from animegifs import animegifs
 
-gif = Animegifs().get_gif(category)
+gifs = animegifs.Animegifs()
+
+gif = gifs.get_gif(category)
 ```
 
 **Category list:** 

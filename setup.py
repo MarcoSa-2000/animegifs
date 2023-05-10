@@ -1,4 +1,4 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 import codecs
 import os
 
@@ -8,11 +8,12 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 LONG_DESCRIPTION = long_description
-VERSION = '0.4.0'
+VERSION = '0.5.0'
 
 setup(
     name='animegifs',
-    packages=find_packages(),
+    package_dir={"anime_gifs": "animegifs"},
+    packages=["animegifs", "animegifs.distutils"],
     version=VERSION,
     description='Get random anime gifs by category.',
     long_description=LONG_DESCRIPTION,
@@ -21,6 +22,9 @@ setup(
     author_email='grest0grest@gmail.com',
     license='MIT',
     url="https://github.com/MarcoSa-2000/animegifs",
+    install_requires=[
+       'requests==2.28.2,<=2.29.0'
+    ],
     python_requires='>=3.8',
     classifiers=[
         "Programming Language :: Python :: 3",
