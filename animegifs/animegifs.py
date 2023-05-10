@@ -46,10 +46,12 @@ class Animegifs:
             gif: gif (url) -> str
         """
         if type(category) is int:
-            raise errors.CategoryIntegral
+            raise errors.CategoryIntegral(category)
         elif category.lower() in gifs_dict:
             gif = gifs_dict[category.lower()]
+        elif category.lower() not in gifs_dict:
+            raise errors.CategoryError(category)
         else:
-            raise errors.CategoryError
+            raise errors.CategoryUnknown(category)
         return gif
         
