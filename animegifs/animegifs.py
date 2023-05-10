@@ -47,8 +47,6 @@ class Animegifs:
         """
         if type(category) is int:
             raise errors.CategoryIntegral
-        elif category is None:
-            raise errors.CategoryNone
         elif category.lower() in gifs_dict:
             gif = gifs_dict[category.lower()]
         else:

@@ -1,4 +1,4 @@
-# anime-gifs.py
+# animegifs.py
 Get random anime gifs by category. Use Python (intended (for now) for Discord).
 
 WIP - updated in time to time. Versions below v0.4.0 aren't expected to work.
