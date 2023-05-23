@@ -14,7 +14,7 @@ class Animegifs:
             category (str): Valid categories: attack, bite, bloodsuck, blush, bonk,
                 brofist, cry, cuddle, dance, disgust, facedesk, facepalm, flick, flirt,
                 handhold, happy, harass, highfive, hug, icecream, insult, kill, kiss,
-                lick.
+                lick, love, marry, nosebleed, nuzzle.
 
         Returns:
             gif: gif (url) -> str

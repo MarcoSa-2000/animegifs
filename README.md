@@ -42,5 +42,9 @@ gif = gifs.get_gif(category)
 * Kill
 * Kiss
 * Lick
+* Love
+* Marry
+* Nosebleed
+* Nuzzle
 
 WIP.
