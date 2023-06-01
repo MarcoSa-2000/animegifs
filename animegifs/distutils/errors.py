@@ -31,3 +31,14 @@ class CategoryUnknown(Exception):
         self.category = category
         self.error = error
         super().__init__(self.error)
+
+class MethodNotUpdated(Exception):
+    """
+    The method for get the gif's <title, mal link, mal id> is not yet supported for that gif url.
+    Usually means is just in work in progress and will be available soon.
+    """
+
+    def __init__(self, gif, error="Method not yet available for this gif."):
+        self.gif = gif
+        self.error = error
+        super().__init__(self.error)
