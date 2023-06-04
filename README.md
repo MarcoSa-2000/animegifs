@@ -39,6 +39,7 @@ malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
 * Cuddle
 * Dance
 * Disgust
+* Exploding
 * Facedesk
 * Facepalm
 * Flick
@@ -55,6 +56,7 @@ malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
 * Lick
 * Love
 * Marry
+* Nod
 * Nosebleed
 * Nuzzle
 * Pat
@@ -75,6 +77,12 @@ malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
 * Sorry
 * Spank
 * Stare
+* Tease
+* Threat
+* Tickle
+* Tired
+* Wave
+* Yawn
 
 **Special Category List**
 

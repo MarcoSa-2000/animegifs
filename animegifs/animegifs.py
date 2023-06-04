@@ -13,11 +13,11 @@ class Animegifs:
 
         Args:
             category (str): Valid categories: attack, bite, bloodsuck, blush, bonk,
-                brofist, cry, cuddle, dance, disgust, facedesk, facepalm, flick, flirt,
+                brofist, cry, cuddle, dance, disgust, exploding, facedesk, facepalm, flick, flirt,
                 handhold, happy, harass, highfive, hug, icecream, insult, kill, kiss,
-                lick, love, marry, nosebleed, nuzzle, pat, peck, poke, popcorn, pout,
+                lick, love, marry, nod, nosebleed, nuzzle, pat, peck, poke, popcorn, pout,
                 punch, punish, random, run, sad, scared, shoot, shrug, sip, slap, smirk,
-                sorry, spank, stare.
+                sorry, spank, stare, tease, threat, tickle, tired, wave, yawn.
 
         Returns:
             gif: gif (url) -> str

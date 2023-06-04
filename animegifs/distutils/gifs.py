@@ -8,16 +8,20 @@ gifs_name_list = ["attack",
                   "bite", 'bloodsuck', 'blush', 'bonk', 'brofist',
                   'cry', 'cuddle',
                   'dance', 'disgust',
+                  'exploding',
                   'facedesk', 'facepalm', 'flick', 'flirt',
                   'handhold', 'happy', 'harass', 'highfive', 'hug',
                   'icecream', 'insult',
                   'kill', 'kiss',
                   'lick', 'love',
                   'marry',
-                  'nosebleed', 'nuzzle',
+                  'nod', 'nosebleed', 'nuzzle',
                   'pat', 'peck', 'poke', 'popcorn', 'pout', 'punch', 'punish',
                   'random', 'run',
-                  'sad', 'scared', 'shoot', 'shrug', 'sip', 'slap', 'smirk', 'sorry', 'spank', 'stare']
+                  'sad', 'scared', 'shoot', 'shrug', 'sip', 'slap', 'smirk', 'sorry', 'spank', 'stare',
+                  'tease', 'threat', 'tickle', 'tired',
+                  'wave',
+                  'yawn']
 
 def authentication():
     response = requests.post("https://enkidu-app-5a3qq2fqya-uc.a.run.app/key1")
