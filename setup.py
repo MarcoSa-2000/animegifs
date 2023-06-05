@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 LONG_DESCRIPTION = long_description
-VERSION = '0.6.1'
+VERSION = '0.6.2'
 
 setup(
     name='animegifs',
@@ -29,7 +29,10 @@ setup(
     ],
     python_requires='>=3.8',
     classifiers=[
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "License :: OSI Approved :: MIT License",
         "Operating System :: Microsoft :: Windows"],
     keywords=['anime', 'gif', 'python', 'anime-gif', 'discord'],

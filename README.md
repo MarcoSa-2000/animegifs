@@ -1,4 +1,15 @@
 # animegifs.py
+<p align="center">
+    <a href="https://pypi.org/project/animegifs/">
+    <img src="https://img.shields.io/pypi/dm/animegifs?logo=PyPI&style=for-the-badge" alt="PyPi Downloads"/></a>
+    <a href="https://discord.gg/TKZJ4GJj2z">
+    <img src="https://img.shields.io/discord/856005478789677096?logo=Discord&style=for-the-badge" alt="Discord Server"/></a>
+    <a href="https://pypi.org/project/animegifs/">
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/MarcoSa-2000/animegifs?style=for-the-badge"></a>
+    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/animegifs?logo=Python&logoColor=%23FFFF00&style=for-the-badge">
+    <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/MarcoSa-2000/animegifs?style=social">
+</p>
+
 Get random anime gifs by category. Use Python (intended (for now) for Discord).
 
 WIP - updated in time to time. Versions below v0.5.3 aren't expected to work flawlessly or at all. Version below v0.6 will not have the gifs library updated anymore.
@@ -89,4 +100,7 @@ malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
 * Random
 * Steal-magic
 
-WIP.
+#Troubleshooting and other
+
+If you encounter an error raise an issue on the issue page: https://github.com/MarcoSa-2000/animegifs/issues 
+or join the discord server to request new categories, new functions, feedback and even errors.

@@ -42,3 +42,25 @@ class MethodNotUpdated(Exception):
         self.gif = gif
         self.error = error
         super().__init__(self.error)
+
+class AuthTimeout(Exception):
+    """
+    Authentication request timed out. Probably status 504 on server side. Check your connection too.
+    """
+
+    def __init__(self, exc, error="Authentication request timed out."):
+        self.exc = exc
+        self.error = error
+        super().__init__(self.error)
+
+class AuthError(Exception):
+    """
+    Authentication request returned an error. Probably status error 4xx.
+    It will be resolved soon, if it persist,
+    issue an issue on https://github.com/MarcoSa-2000/animegifs/issues.
+    """
+
+    def __init__(self, exc, error="Authentication request returned an error."):
+        self.exc = exc
+        self.error = error
+        super().__init__(self.error)

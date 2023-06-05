@@ -1,6 +1,7 @@
 import json
 import requests
 import jwt
+from animegifs.distutils import errors
 
 global TOKEN
 TOKEN = None
@@ -24,8 +25,18 @@ gifs_name_list = ["attack",
                   'yawn']
 
 def authentication():
-    response = requests.post("https://enkidu-app-5a3qq2fqya-uc.a.run.app/key1")
-    auth_key = response.json()['key']
+    try:
+        response = requests.post("https://enkidu-app-5a3qq2fqya-uc.a.run.app/key1", timeout=10)
+    except requests.exceptions.Timeout:
+        try:
+            response = requests.post("https://enkidu-app-5a3qq2fqya-uc.a.run.app/key1", timeout=25)
+        except requests.exceptions.Timeout as exc:
+            raise errors.AuthTimeout(exc)
+    if response.status_code == 200:
+        auth_key = response.json()['key']
+    else:
+        exc = response.status_code
+        raise errors.AuthError(exc)
     return auth_key
 
 def access():

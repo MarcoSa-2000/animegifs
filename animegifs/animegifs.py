@@ -1,6 +1,6 @@
 import random
-from animegifs.distutils import gifs, errors
 from mal import Anime
+from animegifs.distutils import gifs, errors
 
 class Animegifs:
 
@@ -24,7 +24,7 @@ class Animegifs:
         """
         if type(category) is int:
             raise errors.CategoryIntegral(category)
-        elif category.lower() in gifs.gifs_name_list:
+        if category.lower() in gifs.gifs_name_list:
             if category.lower() == 'random':
                 gif_list = []
                 for key, gif_url in gifs.access().items():
@@ -57,8 +57,8 @@ class Animegifs:
                     result = gif_name[1]
                     try:
                         mal = f"https://myanimelist.net/anime/{int(result)}/"
-                    except ValueError:
-                        raise errors.MethodNotUpdated(gif)
+                    except ValueError as exc:
+                        raise errors.MethodNotUpdated(gif) from exc
                     return mal
             else:
                 continue
