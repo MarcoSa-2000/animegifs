@@ -100,7 +100,7 @@ malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
 * Random
 * Steal-magic
 
-#Troubleshooting and other
+# Troubleshooting and other
 
 If you encounter an error raise an issue on the issue page: https://github.com/MarcoSa-2000/animegifs/issues 
 or join the discord server to request new categories, new functions, feedback and even errors.

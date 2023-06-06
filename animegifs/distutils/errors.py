@@ -56,7 +56,7 @@ class AuthTimeout(Exception):
 class AuthError(Exception):
     """
     Authentication request returned an error. Probably status error 4xx.
-    It will be resolved soon, if it persist,
+    It will be resolved soon, if it persists,
     issue an issue on https://github.com/MarcoSa-2000/animegifs/issues.
     """
 

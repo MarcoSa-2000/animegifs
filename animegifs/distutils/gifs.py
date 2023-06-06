@@ -26,10 +26,10 @@ gifs_name_list = ["attack",
 
 def authentication():
     try:
-        response = requests.post("https://enkidu-app-5a3qq2fqya-uc.a.run.app/key1", timeout=10)
+        response = requests.post("https://enkidu-app-5a3qq2fqya-uc.a.run.app/key1", timeout=100)
     except requests.exceptions.Timeout:
         try:
-            response = requests.post("https://enkidu-app-5a3qq2fqya-uc.a.run.app/key1", timeout=25)
+            response = requests.post("https://enkidu-app-5a3qq2fqya-uc.a.run.app/key2", timeout=25)
         except requests.exceptions.Timeout as exc:
             raise errors.AuthTimeout(exc)
     if response.status_code == 200:
