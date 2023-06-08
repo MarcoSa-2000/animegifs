@@ -17,7 +17,7 @@ class Animegifs:
                 handhold, happy, harass, highfive, hug, icecream, insult, kill, kiss,
                 lick, love, marry, nod, nosebleed, nuzzle, pat, peck, poke, popcorn, pout,
                 punch, punish, random, run, sad, scared, shoot, shrug, sip, slap, smirk,
-                sorry, spank, stare, tease, threat, tickle, tired, wave, yawn.
+                sorry, spank, stare, steal-magic, tease, threat, tickle, tired, wave, yawn.
 
         Returns:
             gif: gif (url) -> str

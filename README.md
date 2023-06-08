@@ -32,7 +32,7 @@ from animegifs import animegifs
 
 gifs = animegifs.Animegifs()
 
-gif = gifs.get_gif(category) #return the url of the gif.
+gif = gifs.get_gif(category) #gifs.get_gif('hug') and return the url of the gif.
 mal = gifs.get_mal(gif) #get url of the gif's anime myanimelist page.
 title = gifs.get_animetitle(gif) #get the title of the gif's anime.
 malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
@@ -102,5 +102,14 @@ malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
 
 # Troubleshooting and other
 
-If you encounter an error raise an issue on the issue page: https://github.com/MarcoSa-2000/animegifs/issues 
-or join the discord server to request new categories, new functions, feedback and even errors.
+If you encounter an error, please raise an issue on the issue page: https://github.com/MarcoSa-2000/animegifs/issues. 
+Alternatively, you can join my Discord server to request new categories, functions, provide feedback, or report any errors. 
+I do also have a multi-function Discord bot. Feel free to check out the web dashboard here: https://enkidu-app.github.io.
+
+# Copyright
+
+This repository doesn't include any copyrighted material. 
+If you happen to come across any copyrighted content within this repository (but hosted elsewhere) that you own or represent, 
+email me at **grest0grest@gmail.com**. 
+Please provide specific details about the copyrighted material and where it can be found.
+Once I confirm your claim, I'll take immediate action to remove the identified material.

@@ -45,7 +45,8 @@ class MethodNotUpdated(Exception):
 
 class AuthTimeout(Exception):
     """
-    Authentication request timed out. Probably status 504 on server side. Check your connection too.
+    Authentication request timed out. Probably status error 504 on server side.
+    Check your connection too.
     """
 
     def __init__(self, exc, error="Authentication request timed out."):

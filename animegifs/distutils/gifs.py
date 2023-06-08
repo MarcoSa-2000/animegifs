@@ -19,7 +19,7 @@ gifs_name_list = ["attack",
                   'nod', 'nosebleed', 'nuzzle',
                   'pat', 'peck', 'poke', 'popcorn', 'pout', 'punch', 'punish',
                   'random', 'run',
-                  'sad', 'scared', 'shoot', 'shrug', 'sip', 'slap', 'smirk', 'sorry', 'spank', 'stare',
+                  'sad', 'scared', 'shoot', 'shrug', 'sip', 'slap', 'smirk', 'sorry', 'spank', 'stare', 'steal-magic',
                   'tease', 'threat', 'tickle', 'tired',
                   'wave',
                   'yawn']
