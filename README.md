@@ -38,67 +38,69 @@ title = gifs.get_animetitle(gif) #get the title of the gif's anime.
 malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
 ```
 
-**Category list:** 
+## Category list:
 
+**A**
 * Attack
-* Bite
-* Bloodsuck
-* Blush
-* Bonk
-* Brofist
-* Cry
-* Cuddle
-* Dance
-* Disgust
+
+**B**
+* Bite, Bloodsuck, Blush, Bonk, Brofist
+
+**C**
+* Cry, Cuddle
+
+**D**
+* Dance, Disgust
+
+**E**
 * Exploding
-* Facedesk
-* Facepalm
-* Flick
-* Flirt
-* Handhold
-* Happy
-* Harass
-* Highfive
-* Hug
-* Icecream
-* Insult
-* Kill
-* Kiss
-* Lick
-* Love
+
+**F**
+* Facedesk, Facepalm, Flick, Flirt
+
+**H**
+* Handhold, Happy, Harass, Highfive, Hug
+
+**I**
+* Icecream, Insult
+
+**K**
+* Kill, Kiss
+
+**L**
+* Lick, Love
+
+**M**
 * Marry
-* Nod
-* Nosebleed
-* Nuzzle
-* Pat
-* Peck
-* Poke
-* Popcorn
-* Pout
-* Punch
-* Punish
+
+**N**
+* Nod, Nosebleed, Nuzzle
+
+**P**
+* Pat, Peck, Poke, Popcorn, Pout, Punch, Punish
+
+**R**
 * Run
-* Sad
-* Scared
-* Shoot
-* Shrug
-* Sip
-* Slap
-* Smirk
-* Sorry
-* Spank
-* Stare
-* Tease
-* Threat
-* Tickle
-* Tired
+
+**S**
+* Sad, Scared, ,Shoot, Shrug, Sip, Slap, Smirk, Sorry, Spank, Stare
+
+**T**
+* Tease, Threat, Tickle, Tired
+
+**W**
 * Wave
+
+**Y**
 * Yawn
 
 **Special Category List**
 
-* Random
-* Steal-magic
+* Random, Steal-magic
+
+# Live API
+
+You can test out the API (and lib functionality) on my bot's website here: https://enkidu-app.github.io/animegifs
 
 # Troubleshooting and other
 
@@ -109,7 +111,6 @@ I do also have a multi-function Discord bot. Feel free to check out the web dash
 # Copyright
 
 This repository doesn't include any copyrighted material. 
-If you happen to come across any copyrighted content within this repository (but hosted elsewhere) that you own or represent, 
-email me at **grest0grest@gmail.com**. 
+If you happen to come across any copyrighted content within this repository (but hosted elsewhere) that you own or represent, email me at **grest0grest@gmail.com**. 
 Please provide specific details about the copyrighted material and where it can be found.
 Once I confirm your claim, I'll take immediate action to remove the identified material.

@@ -24,7 +24,7 @@ class Animegifs:
         """
         if type(category) is int:
             raise errors.CategoryIntegral(category)
-        if category.lower() in gifs.gifs_name_list:
+        if category.lower() in list(gifs.access().keys()) or category.lower() == 'random':
             if category.lower() == 'random':
                 gif_list = []
                 for key, gif_url in gifs.access().items():
@@ -35,7 +35,7 @@ class Animegifs:
                 gifs_list = gifs.access()[category.lower()]
                 gif = [gif_url[0] for gif_url in gifs_list]
             gif = random.choice(gif)
-        elif category.lower() not in gifs.gifs_name_list:
+        elif category.lower() not in list(gifs.access().keys()):
             raise errors.CategoryError(category)
         else:
             raise errors.CategoryUnknown(category)
@@ -77,7 +77,10 @@ class Animegifs:
             for gif_name in gif_url:
                 if gif_name[0] == gif:
                     result = gif_name[1]
-                    malid = int(result)
+                    try:
+                        malid = int(result)
+                    except ValueError as exc:
+                        raise errors.MethodNotUpdated(gif) from exc
                     return malid
             else:
                 continue
@@ -96,7 +99,10 @@ class Animegifs:
             for gif_name in gif_url:
                 if gif_name[0] == gif:
                     result = gif_name[1]
-                    title = Anime(int(result)).title
+                    try:
+                        title = Anime(int(result)).title
+                    except ValueError as exc:
+                        raise errors.MethodNotUpdated(gif) from exc
                     return title
             else:
                 continue

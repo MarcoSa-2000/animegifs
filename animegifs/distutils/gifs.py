@@ -5,24 +5,6 @@ from animegifs.distutils import errors
 
 global TOKEN
 TOKEN = None
-gifs_name_list = ["attack",
-                  "bite", 'bloodsuck', 'blush', 'bonk', 'brofist',
-                  'cry', 'cuddle',
-                  'dance', 'disgust',
-                  'exploding',
-                  'facedesk', 'facepalm', 'flick', 'flirt',
-                  'handhold', 'happy', 'harass', 'highfive', 'hug',
-                  'icecream', 'insult',
-                  'kill', 'kiss',
-                  'lick', 'love',
-                  'marry',
-                  'nod', 'nosebleed', 'nuzzle',
-                  'pat', 'peck', 'poke', 'popcorn', 'pout', 'punch', 'punish',
-                  'random', 'run',
-                  'sad', 'scared', 'shoot', 'shrug', 'sip', 'slap', 'smirk', 'sorry', 'spank', 'stare', 'steal-magic',
-                  'tease', 'threat', 'tickle', 'tired',
-                  'wave',
-                  'yawn']
 
 def authentication():
     try:
