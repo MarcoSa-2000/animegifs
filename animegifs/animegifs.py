@@ -102,7 +102,7 @@ class Animegifs:
                     try:
                         title = Anime(int(result)).title
                     except ValueError as exc:
-                        raise errors.MethodNotUpdated(gif) from exc
+                        raise errors.AnimeNotFound(gif) from exc
                     return title
             else:
                 continue

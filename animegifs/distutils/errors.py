@@ -43,6 +43,18 @@ class MethodNotUpdated(Exception):
         self.error = error
         super().__init__(self.error)
 
+class AnimeNotFound(Exception):
+    """
+    Raised if the anime's id is either invalid or has been removed or relocated.
+    Check firstly if myanimelist.net is working correctly, if confirmed,
+    please raise an issue in https://github.com/MarcoSa-2000/animegifs/issues.
+    """
+
+    def __init__(self, gif, error="Anime's ID is either invalid, removed or MyAnimeList is currently down."):
+        self.gif = gif
+        self.error = error
+        super().__init__(self.error)
+
 class AuthTimeout(Exception):
     """
     Authentication request timed out. Probably status error 504 on server side.

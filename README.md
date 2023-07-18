@@ -13,6 +13,7 @@
 Get random anime gifs by category. Use Python (intended (for now) for Discord).
 
 WIP - updated in time to time. Versions below v0.5.3 aren't expected to work flawlessly or at all. Version below v0.6 will not have the gifs library updated anymore.
+For troubleshoots, known errors and categories list, check below.
 
 `pip install animegifs`
 
@@ -36,6 +37,21 @@ gif = gifs.get_gif(category) #gifs.get_gif('hug') and return the url of the gif.
 mal = gifs.get_mal(gif) #get url of the gif's anime myanimelist page.
 title = gifs.get_animetitle(gif) #get the title of the gif's anime.
 malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
+```
+
+```py
+#v0.6>
+from animegifs import animegifs
+
+gifs = animegifs.Animegifs()
+
+user_input = input() #let user send any input and search if that input matches a category.
+#if user_input == "nom":  #nom as category doesn't exist, but is similar to bite (as example)
+#   user_input = "bite"
+try:
+    gif = gifs.get_gif(user_input) #return the url of the gif if category exists.
+except animegifs.errors.CategoryError:
+    print("not a valid gif category.")
 ```
 
 ## Category list:
@@ -102,10 +118,15 @@ malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
 
 You can test out the API (and lib functionality) on my bot's website here: https://enkidu-app.github.io/animegifs
 
+# Submit a GIF
+
+If you also want to contribute to the gifs collection, you can submit a gif at: https://forms.gle/wxWmRuy5VCdDCZWp8
+
 # Troubleshooting and other
 
+The first call (only!) in the session is expected to have a slower reaction time (5-15s) because of the authentication process.
 If you encounter an error, please raise an issue on the issue page: https://github.com/MarcoSa-2000/animegifs/issues. 
-Alternatively, you can join my Discord server to request new categories, functions, provide feedback, or report any errors. 
+Alternatively, you can join my Discord server (https://discord.com/invite/TKZJ4GJj2z) to request new categories, functions, provide feedback, or report any errors. 
 I do also have a multi-function Discord bot. Feel free to check out the web dashboard here: https://enkidu-app.github.io.
 
 # Copyright
