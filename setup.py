@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 LONG_DESCRIPTION = long_description
-VERSION = '0.7.1'
+VERSION = '0.7.2'
 
 setup(
     name='animegifs',
@@ -23,9 +23,9 @@ setup(
     license='MIT',
     url="https://github.com/MarcoSa-2000/animegifs",
     install_requires=[
-       'requests>=2.28.2,<=2.29.0',
+       'requests==2.31.0',
        'mal-api==0.5.3',
-       'PyJWT>=2.4.0,<=2.7.0'
+       'PyJWT>=2.4.0,<=2.8.0'
     ],
     python_requires='>=3.8',
     classifiers=[

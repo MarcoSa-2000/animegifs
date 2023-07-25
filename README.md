@@ -12,7 +12,7 @@
 
 Get random anime gifs by category. Use Python (intended (for now) for Discord).
 
-WIP - updated in time to time. Versions below v0.5.3 aren't expected to work flawlessly or at all. Version below v0.6 will not have the gifs library updated anymore.
+WIP - updated in time to time. Versions below v0.5.3 aren't expected to work flawlessly or at all. Version below v0.7 will not have the gifs library updated anymore.
 For troubleshoots, known errors and categories list, check below.
 
 `pip install animegifs`
@@ -49,7 +49,7 @@ user_input = input() #let user send any input and search if that input matches a
 #if user_input == "nom":  #nom as category doesn't exist, but is similar to bite (as example)
 #   user_input = "bite"
 try:
-    gif = gifs.get_gif(user_input) #return the url of the gif if category exists.
+    gif = gifs.get_gif(user_input) #return the url of the gif if the category exists.
 except animegifs.errors.CategoryError:
     print("not a valid gif category.")
 ```
@@ -99,7 +99,7 @@ except animegifs.errors.CategoryError:
 * Run
 
 **S**
-* Sad, Scared, ,Shoot, Shrug, Sip, Slap, Smirk, Sorry, Spank, Stare
+* Sad, Scared, Shoot, Shrug, Sip, Slap, Smirk, Sorry, Spank, Stare
 
 **T**
 * Tease, Threat, Tickle, Tired

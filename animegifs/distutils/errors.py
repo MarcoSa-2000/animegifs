@@ -1,7 +1,7 @@
 class CategoryIntegral(Exception):
     """
     Category can't be an integral, only a string.
-    You can check valid categories at: https://github.com/MarcoSa-2000/animegifs
+    You can check valid categories at: https://github.com/MarcoSa-2000/animegifs#category-list
     """
 
     def __init__(self, category, error="Category can't be an integral."):
@@ -12,7 +12,7 @@ class CategoryIntegral(Exception):
 class CategoryError(Exception):
     """
     Not a valid category. Category must be a string.
-    You can check valid categories at: https://github.com/MarcoSa-2000/animegifs
+    You can check valid categories at: https://github.com/MarcoSa-2000/animegifs#category-list
     """
 
     def __init__(self, category, error="Not a valid category."):
@@ -24,7 +24,7 @@ class CategoryUnknown(Exception):
     """
     This is a not handled error, probably the category type is neither an int nor a str.
     Make sure to check category is a string and is a valid category.
-    You can check valid categories at: https://github.com/MarcoSa-2000/animegifs
+    You can check valid categories at: https://github.com/MarcoSa-2000/animegifs#category-list
     """
 
     def __init__(self, category, error="Not a valid category."):
