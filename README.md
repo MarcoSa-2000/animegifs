@@ -10,9 +10,10 @@
     <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/MarcoSa-2000/animegifs?style=social">
 </p>
 
-Get random anime gifs by category. Use Python (intended (for now) for Discord).
+API wrapper for animegifs. Get random anime gifs by category. Use Python (intended (for now) for Discord).
 
-WIP - updated in time to time. Versions below v0.5.3 aren't expected to work flawlessly or at all. Version below v0.7 will not have the gifs library updated anymore.
+WIP - updated in time to time. Versions below v0.5.3 aren't expected to work flawlessly or at all. 
+Version below v1.0 will not have the gifs library updated anymore and the gifs may return 404 as they were hosted on Discord.
 For troubleshoots, known errors and categories list, check below.
 
 `pip install animegifs`
@@ -90,7 +91,7 @@ except animegifs.errors.CategoryError:
 * Marry
 
 **N**
-* Nod, Nosebleed, Nuzzle
+* Nod, Nosebleed, Note, Nuzzle
 
 **P**
 * Pat, Peck, Poke, Popcorn, Pout, Punch, Punish
@@ -124,7 +125,6 @@ If you also want to contribute to the gifs collection, you can submit a gif at: 
 
 # Troubleshooting and other
 
-The first call (only!) in the session is expected to have a slower reaction time (5-15s) because of the authentication process.
 If you encounter an error, please raise an issue on the issue page: https://github.com/MarcoSa-2000/animegifs/issues. 
 Alternatively, you can join my Discord server (https://discord.com/invite/TKZJ4GJj2z) to request new categories, functions, provide feedback, or report any errors. 
 I do also have a multi-function Discord bot. Feel free to check out the web dashboard here: https://enkidu-app.github.io.

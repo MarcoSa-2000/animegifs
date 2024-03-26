@@ -1,6 +1,33 @@
-import random
-from mal import Anime
-from animegifs.distutils import gifs, errors
+from animegifs.distutils import errors
+import requests
+import urllib.parse
+
+version = "v3"
+
+def request_api(type, arg):
+    arg = urllib.parse.quote(arg)
+    if type == "get_gif":
+        gif_url = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/api/?category={arg}")
+        if gif_url.status_code != 200:
+            raise errors.CategoryError
+        data = gif_url.json()
+        gif = data['gif']
+        return gif
+    elif type == "get_mal":
+        gif_mal = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/get_mal/?gif={arg}")
+        data = gif_mal.json()
+        mal = data['mal']
+        return mal
+    elif type == "get_mal_id":
+        gif_mal_id = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/get_malid/?gif={arg}")
+        data = gif_mal_id.json()
+        mal_id = data['mal_id']
+        return mal_id
+    elif type == "get_animetitle":
+        gif_animetitle = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/get_animetitle/?gif={arg}")
+        data = gif_animetitle.json()
+        animetitle = data['animetitle']
+        return animetitle
 
 class Animegifs:
 
@@ -15,30 +42,14 @@ class Animegifs:
             category (str): Valid categories: attack, bite, bloodsuck, blush, bonk,
                 brofist, cry, cuddle, dance, disgust, exploding, facedesk, facepalm, flick, flirt,
                 handhold, happy, harass, highfive, hug, icecream, insult, kill, kiss,
-                lick, love, marry, nod, nosebleed, nuzzle, pat, peck, poke, popcorn, pout,
+                lick, love, marry, nod, nosebleed, note, nuzzle, pat, peck, poke, popcorn, pout,
                 punch, punish, random, run, sad, scared, shoot, shrug, sip, slap, smirk,
                 sorry, spank, stare, steal-magic, tease, threat, tickle, tired, wave, yawn.
 
         Returns:
             gif: gif (url) -> str
         """
-        if type(category) is int:
-            raise errors.CategoryIntegral(category)
-        if category.lower() in list(gifs.access().keys()) or category.lower() == 'random':
-            if category.lower() == 'random':
-                gif_list = []
-                for key, gif_url in gifs.access().items():
-                    for urls in gif_url:
-                        gif_list.append(urls[0])
-                gif = gif_list
-            else:
-                gifs_list = gifs.access()[category.lower()]
-                gif = [gif_url[0] for gif_url in gifs_list]
-            gif = random.choice(gif)
-        elif category.lower() not in list(gifs.access().keys()):
-            raise errors.CategoryError(category)
-        else:
-            raise errors.CategoryUnknown(category)
+        gif = request_api("get_gif", category)
         return gif
 
     def get_mal(self, gif) -> str:
@@ -51,17 +62,10 @@ class Animegifs:
         Returns:
             mal: mal (url) -> str
         """
-        for key, gif_url in gifs.access().items():
-            for gif_name in gif_url:
-                if gif_name[0] == gif:
-                    result = gif_name[1]
-                    try:
-                        mal = f"https://myanimelist.net/anime/{int(result)}/"
-                    except ValueError as exc:
-                        raise errors.MethodNotUpdated(gif) from exc
-                    return mal
-            else:
-                continue
+        mal = request_api("get_mal", gif)
+        if mal == "null":
+            raise errors.CategoryError
+        return mal
 
     def get_malId(self, gif) -> int:
         """
@@ -73,17 +77,10 @@ class Animegifs:
         Returns:
             malid: malId -> int
         """
-        for key, gif_url in gifs.access().items():
-            for gif_name in gif_url:
-                if gif_name[0] == gif:
-                    result = gif_name[1]
-                    try:
-                        malid = int(result)
-                    except ValueError as exc:
-                        raise errors.MethodNotUpdated(gif) from exc
-                    return malid
-            else:
-                continue
+        mal_id = request_api("get_mal_id", gif)
+        if mal_id == "null":
+            raise errors.CategoryError
+        return mal_id
 
     def get_animetitle(self, gif) -> str:
         """
@@ -95,14 +92,7 @@ class Animegifs:
         Returns:
             title: title -> str
         """
-        for key, gif_url in gifs.access().items():
-            for gif_name in gif_url:
-                if gif_name[0] == gif:
-                    result = gif_name[1]
-                    try:
-                        title = Anime(int(result)).title
-                    except ValueError as exc:
-                        raise errors.AnimeNotFound(gif) from exc
-                    return title
-            else:
-                continue
+        animetitle = request_api("get_animetitle", gif)
+        if animetitle == "null":
+            raise errors.CategoryError
+        return animetitle
