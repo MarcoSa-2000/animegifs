@@ -5,7 +5,11 @@ import urllib.parse
 version = "v3"
 
 def request_api(type, arg):
-    arg = urllib.parse.quote(arg)
+    try:
+        if arg is not None:
+            arg = urllib.parse.quote(arg)
+    except TypeError:
+        raise errors.ArgumentError
     if type == "get_gif":
         gif_url = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/api/?category={arg}")
         if gif_url.status_code != 200:
@@ -28,6 +32,13 @@ def request_api(type, arg):
         data = gif_animetitle.json()
         animetitle = data['animetitle']
         return animetitle
+    elif type == "get_categories":
+        categories = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/get_categories")
+        if categories.status_code != 200:
+            raise errors.APIError
+        data = categories.json()
+        categories = data['categories']
+        return categories
 
 class Animegifs:
 
@@ -43,7 +54,7 @@ class Animegifs:
                 brofist, cry, cuddle, dance, disgust, exploding, facedesk, facepalm, flick, flirt,
                 handhold, happy, harass, highfive, hug, icecream, insult, kill, kiss,
                 lick, love, marry, nod, nosebleed, note, nuzzle, pat, peck, poke, popcorn, pout,
-                punch, punish, random, run, sad, scared, shoot, shrug, sip, slap, smirk,
+                punch, punish, random, run, sad, scared, shoot, shrug, sip, slap, smack, smirk,
                 sorry, spank, stare, steal-magic, tease, threat, tickle, tired, wave, yawn.
 
         Returns:
@@ -63,8 +74,8 @@ class Animegifs:
             mal: mal (url) -> str
         """
         mal = request_api("get_mal", gif)
-        if mal == "null":
-            raise errors.CategoryError
+        if mal is None:
+            raise errors.GifError
         return mal
 
     def get_malId(self, gif) -> int:
@@ -75,11 +86,11 @@ class Animegifs:
             gif (url: str)
 
         Returns:
-            malid: malId -> int
+            mal_id: mal_id -> int
         """
         mal_id = request_api("get_mal_id", gif)
-        if mal_id == "null":
-            raise errors.CategoryError
+        if mal_id is None:
+            raise errors.GifError
         return mal_id
 
     def get_animetitle(self, gif) -> str:
@@ -93,6 +104,15 @@ class Animegifs:
             title: title -> str
         """
         animetitle = request_api("get_animetitle", gif)
-        if animetitle == "null":
-            raise errors.CategoryError
+        if animetitle is None:
+            raise errors.GifError
         return animetitle
+    def get_categories(self) -> list:
+        """
+        Return the list of the available categories.
+
+        Returns:
+            categories: categories -> list
+        """
+        categories = request_api("get_categories", None)
+        return categories

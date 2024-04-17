@@ -20,16 +20,7 @@ For troubleshoots, known errors and categories list, check below.
 
 # HOW TO USE
 ```py
-#v0.5.3>
-from animegifs import animegifs
-
-gifs = animegifs.Animegifs()
-
-gif = gifs.get_gif(category) #return the url of the gif.
-```
-
-```py
-#v0.6>
+#v1.1.0>
 from animegifs import animegifs
 
 gifs = animegifs.Animegifs()
@@ -38,6 +29,7 @@ gif = gifs.get_gif(category) #gifs.get_gif('hug') and return the url of the gif.
 mal = gifs.get_mal(gif) #get url of the gif's anime myanimelist page.
 title = gifs.get_animetitle(gif) #get the title of the gif's anime.
 malid = gifs.get_malId(gif) #get the ID of the gif's anime myanimelist page.
+categories = gifs.get_categories() #get a list of available ctegories.
 ```
 
 ```py
@@ -100,7 +92,7 @@ except animegifs.errors.CategoryError:
 * Run
 
 **S**
-* Sad, Scared, Shoot, Shrug, Sip, Slap, Smirk, Sorry, Spank, Stare
+* Sad, Scared, Shoot, Shrug, Sip, Slap, Smack, Smirk, Sorry, Spank, Stare
 
 **T**
 * Tease, Threat, Tickle, Tired
