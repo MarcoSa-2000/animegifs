@@ -5,7 +5,10 @@ import urllib.parse
 version = "v3"
 
 def request_api(type, arg):
-    arg = urllib.parse.quote(arg)
+    try:
+        arg = urllib.parse.quote(arg)
+    except TypeError:
+        arg = None
     if type == "get_gif":
         gif_url = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/api/?category={arg}")
         if gif_url.status_code != 200:
@@ -28,6 +31,11 @@ def request_api(type, arg):
         data = gif_animetitle.json()
         animetitle = data['animetitle']
         return animetitle
+    elif type == "get_categories":
+        categories = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/get_categories")
+        data = categories.json()
+        categories = data['categories']
+        return categories
 
 class Animegifs:
 
@@ -75,7 +83,7 @@ class Animegifs:
             gif (url: str)
 
         Returns:
-            malid: malId -> int
+            mal_id: mal_id -> int
         """
         mal_id = request_api("get_mal_id", gif)
         if mal_id == "null":
@@ -96,3 +104,14 @@ class Animegifs:
         if animetitle == "null":
             raise errors.CategoryError
         return animetitle
+    def get_categories(self) -> list:
+        """
+        Return the list of the available categories.
+
+        Returns:
+            categories: categories -> list
+        """
+        categories = request_api("get_categories", None)
+        if categories == "null":
+            raise errors.CategoryError
+        return categories
