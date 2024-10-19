@@ -12,7 +12,7 @@
 
 API wrapper for animegifs. Get random anime gifs by category. Use Python (intended (for now) for Discord).
 
-WIP - updated in time to time. Versions below v0.5.3 aren't expected to work flawlessly or at all. 
+WIP - updated in time to time.
 Version below v1.0 will not have the gifs library updated anymore and the gifs may return 404 as they were hosted on Discord.
 For troubleshoots, known errors and categories list, check below.
 
@@ -20,7 +20,7 @@ For troubleshoots, known errors and categories list, check below.
 
 # HOW TO USE
 ```py
-#v1.1.0>
+#v1.2.0>
 from animegifs import animegifs
 
 gifs = animegifs.Animegifs()
