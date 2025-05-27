@@ -8,6 +8,7 @@
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/MarcoSa-2000/animegifs?style=for-the-badge"></a>
     <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/animegifs?logo=Python&logoColor=%23FFFF00&style=for-the-badge">
     <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/MarcoSa-2000/animegifs?style=social">
+    <a href="https://pepy.tech/projects/animegifs"><img src="https://static.pepy.tech/badge/animegifs" alt="PyPI Downloads"></a>
 </p>
 
 API wrapper for animegifs. Get random anime gifs by category. Use Python (intended (for now) for Discord).
@@ -65,7 +66,7 @@ except animegifs.errors.CategoryError:
 * Exploding
 
 **F**
-* Facedesk, Facepalm, Flick, Flirt
+* Facedesk, Facepalm, Flick, Flirt, French_kiss
 
 **H**
 * Handhold, Happy, Harass, Highfive, Hug
@@ -92,7 +93,7 @@ except animegifs.errors.CategoryError:
 * Run
 
 **S**
-* Sad, Scared, Shoot, Shrug, Sip, Slap, Smack, Smirk, Sorry, Spank, Stare
+* Sad, Scared, Scold, Shoot, Shrug, Sip, Slap, Smack, Smirk, Sorry, Spank, Stare
 
 **T**
 * Tease, Threat, Tickle, Tired

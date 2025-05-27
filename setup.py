@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 LONG_DESCRIPTION = long_description
-VERSION = '1.2.0'
+VERSION = '1.2.1'
 
 setup(
     name='animegifs',
@@ -23,7 +23,7 @@ setup(
     license='MIT',
     url="https://github.com/MarcoSa-2000/animegifs",
     install_requires=[
-       'requests~=2.32.0',
+       'requests>=2.32.2',
        'mal-api==0.5.3'
     ],
     python_requires='>=3.8',
@@ -32,6 +32,8 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "License :: OSI Approved :: MIT License",
         "Operating System :: Microsoft :: Windows"],
     keywords=['anime', 'gif', 'python', 'anime-gifs', 'discord'],
