@@ -12,8 +12,10 @@ def request_api(type, arg):
         raise errors.ArgumentError
     if type == "get_gif":
         gif_url = requests.get(f"https://animegifs-enkidu.koyeb.app/{version}/api/?category={arg}")
-        if gif_url.status_code != 200:
+        if gif_url.status_code == 404:
             raise errors.CategoryError
+        elif gif_url.status_code != 200:
+            raise errors.APIError
         data = gif_url.json()
         gif = data['gif']
         return gif
